@@ -8,7 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+// MARK: - Properties
+    let topChoices: [CaptionOption] = [CaptionOption(emoji: "👨🏻‍💻", caption: "Post a meme"), CaptionOption(emoji: "😳", caption: "Looks at girl"), CaptionOption(emoji: "🫴🏻", caption: "Helps someone")]
+    let bottomChoices: [CaptionOption] = [CaptionOption(emoji: "😳", caption: "Pervert"), CaptionOption(emoji: "👨🏻‍⚖️", caption: "Lawsuit"), CaptionOption(emoji: "🤡", caption: "Weirdo")]
+    
 // MARK: - IBOutlets
     @IBOutlet var topSegmentedControl: UISegmentedControl!
     @IBOutlet var bottomSegmentedControl: UISegmentedControl!
@@ -19,7 +22,7 @@ class ViewController: UIViewController {
 // MARK: - Setup
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 // MARK: - IBActions

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8043A9BB29FD8E9000909CA0 /* CaptionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8043A9BA29FD8E9000909CA0 /* CaptionOption.swift */; };
 		807243BF29FD87ED00CAB87E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807243BE29FD87ED00CAB87E /* AppDelegate.swift */; };
 		807243C129FD87ED00CAB87E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807243C029FD87ED00CAB87E /* SceneDelegate.swift */; };
 		807243C329FD87ED00CAB87E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807243C229FD87ED00CAB87E /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8043A9BA29FD8E9000909CA0 /* CaptionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionOption.swift; sourceTree = "<group>"; };
 		807243BB29FD87ED00CAB87E /* MemeMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		807243BE29FD87ED00CAB87E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		807243C029FD87ED00CAB87E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				807243BE29FD87ED00CAB87E /* AppDelegate.swift */,
 				807243C029FD87ED00CAB87E /* SceneDelegate.swift */,
 				807243C229FD87ED00CAB87E /* ViewController.swift */,
+				8043A9BA29FD8E9000909CA0 /* CaptionOption.swift */,
 				807243C429FD87ED00CAB87E /* Main.storyboard */,
 				807243C729FD87EE00CAB87E /* Assets.xcassets */,
 				807243C929FD87EE00CAB87E /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				807243C329FD87ED00CAB87E /* ViewController.swift in Sources */,
+				8043A9BB29FD8E9000909CA0 /* CaptionOption.swift in Sources */,
 				807243BF29FD87ED00CAB87E /* AppDelegate.swift in Sources */,
 				807243C129FD87ED00CAB87E /* SceneDelegate.swift in Sources */,
 			);
