@@ -1,24 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AwkwardPenguin" translatesAutoresizingMaskIntoConstraints="NO" id="A32-Ab-pxN">
+                                <rect key="frame" x="38" y="268" width="314" height="308"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="dMm-fS-dQu">
+                                <rect key="frame" x="42" y="265" width="306" height="43"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOTTOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="eFh-b0-WLc">
+                                <rect key="frame" x="42" y="534" width="306" height="42"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="3" height="1"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iJR-kA-FeC">
+                                <rect key="frame" x="130" y="588" width="129" height="34"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FwO-2c-nMg">
+                                <rect key="frame" x="130" y="223" width="131" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EiT-Es-7we"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kge-wU-DfC"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FwO-2c-nMg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="3Dd-zx-2gD"/>
+                            <constraint firstItem="iJR-kA-FeC" firstAttribute="top" secondItem="A32-Ab-pxN" secondAttribute="bottom" constant="12" id="6FR-NG-2lO"/>
+                            <constraint firstItem="FwO-2c-nMg" firstAttribute="trailing" secondItem="iJR-kA-FeC" secondAttribute="trailing" constant="1" id="BHO-MH-M7D"/>
+                            <constraint firstItem="dMm-fS-dQu" firstAttribute="trailing" secondItem="eFh-b0-WLc" secondAttribute="trailing" id="CU9-ty-iYG"/>
+                            <constraint firstItem="FwO-2c-nMg" firstAttribute="leading" secondItem="iJR-kA-FeC" secondAttribute="leading" id="DU4-2i-eAO"/>
+                            <constraint firstItem="A32-Ab-pxN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JEr-oc-XNI"/>
+                            <constraint firstItem="dMm-fS-dQu" firstAttribute="leading" secondItem="eFh-b0-WLc" secondAttribute="leading" id="K7Q-8f-bTg"/>
+                            <constraint firstItem="dMm-fS-dQu" firstAttribute="top" secondItem="FwO-2c-nMg" secondAttribute="bottom" constant="12" id="LZT-Tv-H1m"/>
+                            <constraint firstItem="A32-Ab-pxN" firstAttribute="centerX" secondItem="eFh-b0-WLc" secondAttribute="centerX" id="NnL-7F-UB0"/>
+                            <constraint firstItem="FwO-2c-nMg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="176" id="POD-WL-ybJ"/>
+                            <constraint firstItem="A32-Ab-pxN" firstAttribute="bottom" secondItem="eFh-b0-WLc" secondAttribute="bottom" id="SLd-y2-Nfb"/>
+                            <constraint firstItem="dMm-fS-dQu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="edu-bd-isr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iJR-kA-FeC" secondAttribute="bottom" constant="189" id="gMq-ZH-RXh"/>
+                            <constraint firstItem="FwO-2c-nMg" firstAttribute="centerX" secondItem="dMm-fS-dQu" secondAttribute="centerX" id="hsc-O0-H4g"/>
+                            <constraint firstItem="A32-Ab-pxN" firstAttribute="top" secondItem="FwO-2c-nMg" secondAttribute="bottom" constant="15" id="jSx-Nc-ICj"/>
+                            <constraint firstItem="A32-Ab-pxN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="m7F-F8-iv9"/>
+                            <constraint firstItem="FwO-2c-nMg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uLx-FV-G7Y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomSegmentedControl" destination="iJR-kA-FeC" id="sik-qd-mC7"/>
+                        <outlet property="bottomeCaptionLabel" destination="eFh-b0-WLc" id="5oV-hq-Qep"/>
+                        <outlet property="topCaptionLabel" destination="dMm-fS-dQu" id="wzt-pm-Yhd"/>
+                        <outlet property="topSegmentedControl" destination="FwO-2c-nMg" id="6Rq-3E-fQ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.38461538461539" y="4.9763033175355451"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AwkwardPenguin" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
