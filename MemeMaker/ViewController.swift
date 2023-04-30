@@ -33,6 +33,7 @@ class ViewController: UIViewController {
 // MARK: - IBActions
 
     @IBAction func segmentedControls(_ sender: Any) {
+        
     }
     
 // MARK: - Functions
@@ -40,14 +41,18 @@ class ViewController: UIViewController {
     func topSegmentedControlConfig() {
         for button in topChoices {
             topSegmentedControl.insertSegment(withTitle: button.emoji, at: topChoices.count, animated: false)
+            
+            topSegmentedControl.selectedSegmentIndex = 0
         }
     }
     
     func bottomSegmentedControlConfig() {
         for button in bottomChoices {
             bottomSegmentedControl.insertSegment(withTitle: button.emoji, at: bottomChoices.count, animated: false)
+            
+            bottomSegmentedControl.selectedSegmentIndex = 0
         }
     }
-    
+  
 }
 
