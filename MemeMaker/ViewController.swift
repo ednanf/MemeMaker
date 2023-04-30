@@ -9,7 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 // MARK: - Properties
-    let topChoices = [CaptionOption(emoji: "👨🏻‍💻", caption: "Post a meme"), CaptionOption(emoji: "👀", caption: "Looks at girl"), CaptionOption(emoji: "🫴🏻", caption: "Helps someone")] // The array has to have each property from the struct CaptionOption.
+    let topChoices = [CaptionOption(emoji: "👨🏻‍💻", caption: "Post a meme"), CaptionOption(emoji: "👀", caption: "Looks at girl"), CaptionOption(emoji: "🫴🏻", caption: "Helps someone")]
+    // The array has to have each property from the struct CaptionOption. If the property was an optional (let emoji: String?), they could be ommited. Furthermore, it could have a default value in case the value was ommited in the array. If .emoji was (let emoji: String? = "hello") and I ommited the emoji value in an index, the word "hello" would appear instead.
     let bottomChoices = [CaptionOption(emoji: "😳", caption: "Pervert"), CaptionOption(emoji: "👨🏻‍⚖️", caption: "Lawsuit"), CaptionOption(emoji: "🤡", caption: "Weirdo")]
     
 // MARK: - IBOutlets
