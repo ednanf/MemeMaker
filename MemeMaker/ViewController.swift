@@ -25,15 +25,18 @@ class ViewController: UIViewController {
         
         topSegmentedControl.removeAllSegments()
         topSegmentedControlConfig()
+        topSegmentedControlPosition()
         
         bottomSegmentedControl.removeAllSegments()
         bottomSegmentedControlConfig()
+        bottomSegmentedControlPosition()
     }
 
 // MARK: - IBActions
 
     @IBAction func segmentedControls(_ sender: Any) {
-        
+        topSegmentedControlPosition()
+        bottomSegmentedControlPosition()
     }
     
 // MARK: - Functions
@@ -53,6 +56,21 @@ class ViewController: UIViewController {
             bottomSegmentedControl.selectedSegmentIndex = 0
         }
     }
-  
+    
+    func topSegmentedControlPosition() {
+        let position = topSegmentedControl.selectedSegmentIndex
+        let choice = topChoices[position]
+        
+        topCaptionLabel.text = choice.caption
+        }
+    
+    func bottomSegmentedControlPosition() {
+        let position = bottomSegmentedControl.selectedSegmentIndex
+        let choice = bottomChoices[position]
+        
+        bottomeCaptionLabel.text = choice.caption
+    }
+    
 }
+
 
