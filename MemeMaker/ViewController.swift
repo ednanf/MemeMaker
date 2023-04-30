@@ -8,10 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+
 // MARK: - Properties
     let topChoices = [CaptionOption(emoji: "👨🏻‍💻", caption: "Post a meme"), CaptionOption(emoji: "👀", caption: "Looks at girl"), CaptionOption(emoji: "🫴🏻", caption: "Helps someone")]
     // The array has to have each property from the struct CaptionOption. If the property was an optional (let emoji: String?), they could be ommited. Furthermore, it could have a default value in case the value was ommited in the array. If .emoji was (let emoji: String? = "hello") and I ommited the emoji value in an index, the word "hello" would appear instead.
     let bottomChoices = [CaptionOption(emoji: "😳", caption: "Pervert"), CaptionOption(emoji: "👨🏻‍⚖️", caption: "Lawsuit"), CaptionOption(emoji: "🤡", caption: "Weirdo")]
+    
     
 // MARK: - IBOutlets
     @IBOutlet var topSegmentedControl: UISegmentedControl!
@@ -19,6 +21,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var topCaptionLabel: UILabel!
     @IBOutlet var bottomeCaptionLabel: UILabel!
+    
     
 // MARK: - Setup
     override func viewDidLoad() {
@@ -33,6 +36,7 @@ class ViewController: UIViewController {
         bottomSegmentedControlPosition()
     }
 
+    
 // MARK: - IBActions
 
     @IBAction func segmentedControls(_ sender: Any) {
@@ -40,7 +44,22 @@ class ViewController: UIViewController {
         bottomSegmentedControlPosition()
     }
     
-// MARK: - Functions
+    @IBAction func dragTopLabel(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .changed {
+            topCaptionLabel.center =
+            sender.location(in: view)
+        }
+    }
+        
+    @IBAction func dragBottomLabel(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .changed {
+            bottomeCaptionLabel.center =
+            sender.location(in: view)
+        }
+    }
+    
+    
+    // MARK: - Functions
     
     func topSegmentedControlConfig() {
         for button in topChoices {
@@ -53,7 +72,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     func bottomSegmentedControlConfig() {
         for button in bottomChoices {
             bottomSegmentedControl.insertSegment(withTitle: button.emoji, at: bottomChoices.count, animated: false)
@@ -62,14 +80,12 @@ class ViewController: UIViewController {
         }
     }
     
-    
     func topSegmentedControlPosition() {
         let position = topSegmentedControl.selectedSegmentIndex // This means that whatever the position of the button, it will be correct index number for segmented control.
-        let choice = topChoices[position] // I added the constant position as the number, because selectedSegmentIndex is a Int.
+        let choice = topChoices[position] // I added the constant position as the number, because selectedSegmentIndex is an Int.
         
         topCaptionLabel.text = choice.caption // I have to specify I want the property .caption from the CaptionOption in the array.
     }
-    
     
     func bottomSegmentedControlPosition() {
         let position = bottomSegmentedControl.selectedSegmentIndex
@@ -77,7 +93,9 @@ class ViewController: UIViewController {
         
         bottomeCaptionLabel.text = choice.caption
     }
+   
+    
+    
+    
     
 }
-
-
